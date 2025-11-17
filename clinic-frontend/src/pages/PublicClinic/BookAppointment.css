@@ -1,0 +1,39 @@
+.book-container {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.book-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.book-form {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.book-form input,
+.book-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.book-form button {
+  width: 100%;
+  padding: 14px;
+  background: #6ab9ff;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+}

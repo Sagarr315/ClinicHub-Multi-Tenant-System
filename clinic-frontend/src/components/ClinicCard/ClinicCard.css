@@ -1,0 +1,85 @@
+/* Main Card */
+.clinic-card {
+  background: #111;
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover */
+.clinic-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Hospital Name */
+.clinic-name {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Subdomain text */
+.subdomain {
+  color: #a5a5a5;
+  font-size: 14px;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+/* Visit Button */
+.visit-btn {
+  display: inline-block;
+  padding: 9px 20px;
+  background: #6ab9ff;
+  color: #000 !important;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+/* Visit Button Hover */
+.visit-btn:hover {
+  background: #4ea6ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(106, 185, 255, 0.35);
+}
+
+.clinic-grid {
+  display: grid;
+  gap: 22px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* 1 per row – phones */
+@media (max-width: 420px) {
+  .clinic-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 2 per row – large phones */
+@media (min-width: 421px) and (max-width: 768px) {
+  .clinic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 per row – tablets & small laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .clinic-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 per row – large desktop */
+@media (min-width: 1201px) {
+  .clinic-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

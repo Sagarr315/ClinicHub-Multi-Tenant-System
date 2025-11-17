@@ -1,0 +1,153 @@
+.superadmin-bg {
+  background: #0e0e0e;
+}
+
+.password-toggle svg {
+  color: #7df9ff !important;
+}
+
+
+.superadmin-card {
+  background: #181818 !important;
+  width: 380px;
+  border-radius: 16px;
+  border: 1px solid #252525;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.1);
+}
+
+.superadmin-card .form-control {
+  background: #111 !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
+}
+
+.superadmin-card .form-control:focus {
+  box-shadow: 0 0 8px #7df9ff !important;
+  border-color: #7df9ff !important;
+}
+
+.input-group-text {
+    color: #7df9ff !important;
+  background: #111 !important;
+  border: 1px solid #333 !important;
+  color: #7df9ff !important;
+}
+
+.btn-info {
+  background: #7df9ff !important;
+  border: none !important;
+  color: #000 !important;
+  transition: 0.3s ease;
+  font-weight: 700 !important;
+}
+
+.electric-hover:hover {
+  box-shadow: 0 0 15px #7df9ff, 0 0 20px #7df9ff inset;
+  background: #9bfaff !important;
+}
+
+.superadmin-card h2 {
+  color: #ffffff;
+}
+/* =============================== */
+
+
+/* Mobile Large (max-width: 425px) */
+@media (max-width: 425px) {
+.superadmin-card {
+width: 300px;
+padding: 20px !important;
+}
+
+
+.superadmin-card h2 {
+font-size: 1.3rem;
+}
+
+
+.input-group-text svg {
+width: 15px;
+height: 15px;
+}
+
+
+.form-control {
+font-size: 0.85rem;
+padding: 6px 8px !important;
+}
+
+
+.btn-info {
+padding: 9px !important;
+font-size: 0.9rem !important;
+}
+}
+
+
+/* Mobile Small (max-width: 360px) */
+@media (max-width: 360px) {
+.superadmin-card {
+width: 270px;
+padding: 18px !important;
+}
+
+
+.superadmin-card h2 {
+font-size: 1.2rem;
+}
+
+
+.input-group-text {
+padding: 5px !important;
+}
+
+
+.input-group-text svg {
+width: 14px;
+height: 14px;
+}
+
+
+.form-control {
+font-size: 0.8rem;
+padding: 6px !important;
+}
+
+
+.btn-info {
+padding: 8px !important;
+font-size: 0.85rem !important;
+}
+}
+
+
+/* Mobile Extra Small (max-width: 320px) */
+@media (max-width: 320px) {
+.superadmin-card {
+width: 250px;
+padding: 16px !important;
+}
+
+
+.superadmin-card h2 {
+font-size: 1.1rem;
+}
+
+
+.input-group-text svg {
+width: 12px;
+height: 12px;
+}
+
+
+.form-control {
+font-size: 0.75rem;
+padding: 5px !important;
+}
+
+
+.btn-info {
+padding: 7px !important;
+font-size: 0.8rem !important;
+}
+}

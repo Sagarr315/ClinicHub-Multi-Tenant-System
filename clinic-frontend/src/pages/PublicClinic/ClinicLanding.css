@@ -1,0 +1,39 @@
+.clinic-landing-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.clinic-landing-container h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.tagline {
+  margin-top: 8px;
+  color: #bbb;
+  font-size: 18px;
+}
+
+.clinic-info {
+  margin-top: 25px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.book-now-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 28px;
+  background: #6ab9ff;
+  color: #000 !important;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.clinic-loading {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+}

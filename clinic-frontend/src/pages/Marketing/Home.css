@@ -1,0 +1,158 @@
+.home-banner {
+  height: 70vh;
+  background: linear-gradient(135deg,#1a1a1a,#0e0e0e);
+}
+
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.explore-btn {
+  padding: 10px 25px !important;
+  background-color: #6ab9ff !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+.explore-btn:hover {
+  background-color: #4a9eff !important;
+  color: #000 !important;
+}
+
+
+/* PRICING */
+.pricing {
+  background:#151515;
+}
+
+.plan-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  box-shadow: 0 0 30px rgba(106,185,255,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(106,185,255,0.25);
+  border: 2px solid #6ab9ff !important;
+}
+
+.features{
+  background-color: 
+#151515
+;
+}
+
+.featured-tag {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  background: #6ab9ff;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.plan-btn {
+  background: #6ab9ff !important;
+  color: #000 !important;
+  border-radius: 10px;
+}
+
+ .plan-btn:hover{
+  background: #4a9eff !important;
+ 
+}
+
+.price{
+  color: #6ab9ff;
+  font-size: 20px;
+
+}
+
+/* System Overview */
+.system-overview {
+  background-color: #0B0B0B;
+  color: #ddd;
+}
+
+
+/* FAQ */
+.faq-card {
+  background: #111;
+  border: 1px solid #222;
+  box-shadow: 0 0 35px rgba(106,185,255,0.25);
+ animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-item h5 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq-item h5 span {
+  color: #6ab9ff;
+  font-weight: 800;
+}
+
+.faq-item p {
+  color: #bbb;
+  margin-left: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* keep price / buttons as your theme */
+.plan-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  box-shadow: 0 0 30px rgba(106,185,255,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(106,185,255,0.25);
+  border: 2px solid #6ab9ff !important;
+}
+
+/* small spacing tweaks */
+.modules .module-card p,
+.personas .persona-card p,
+.workflow-step .text-muted,
+.faq-item p {
+  color: #bfc7d1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .workflow-step { margin-bottom: 10px; }
+  .module-icon { width: 48px; height: 48px; }
+}

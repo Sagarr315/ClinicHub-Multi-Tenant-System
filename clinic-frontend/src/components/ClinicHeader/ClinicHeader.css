@@ -1,0 +1,22 @@
+.clinic-header {
+  background: #151515;
+  padding: 18px 0;
+  border-bottom: 1px solid #333;
+}
+
+.clinic-logo h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #6ab9ff;
+}
+
+.clinic-nav .nav-btn {
+  margin-left: 25px;
+  color: #ddd;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.clinic-nav .nav-btn:hover {
+  color: #fff;
+}

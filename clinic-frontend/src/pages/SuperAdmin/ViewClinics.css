@@ -1,0 +1,29 @@
+.viewclinics-container {
+  color: #e2e8f0;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6ab9ff;
+  margin-bottom: 1.5rem;
+}
+
+.clinic-card {
+  background: #121212;
+  border: 1px solid #2d3748;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.clinic-card:hover {
+  border-color: #6ab9ff;
+  box-shadow: 0 0 10px rgba(106, 185, 255, 0.3);
+}
+
+.sub-info {
+  color: #6ab9ff;
+  font-weight: 600;
+}

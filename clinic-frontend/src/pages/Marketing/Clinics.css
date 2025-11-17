@@ -1,0 +1,25 @@
+
+/* Clinic Card Animations */
+.clinic-card {
+  background: #111 !important;
+  border: 1px solid #1f1f1f !important;
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 0 18px rgba(0,0,0,0.35);
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+/* Float Animation (always moving slightly) */
+@keyframes floatSoft {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Hover effect */
+.clinic-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 25px rgba(106,185,255,0.35);
+
+}

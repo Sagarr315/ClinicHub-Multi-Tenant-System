@@ -1,0 +1,119 @@
+/* Base Styles */
+.about-banner {
+  height: 45vh;
+  background: linear-gradient(135deg, #0d0d0d, #151515);
+  padding-top: 40px;
+}
+
+.about-section {
+  background: #0e0e0e;
+  border-top: 1px solid #222;
+}
+
+.about-card,
+.persona-card {
+  background: #1a1a1a;
+  border: 1px solid #2b2b2b;
+  box-shadow: 0 0 22px rgba(106,185,255,0.1);
+  transition: 0.3s ease;
+  min-height: 100%;
+}
+
+.about-card:hover,
+.persona-card:hover {
+  transform: translateY(-6px);
+  border-color: #6ab9ff;
+  box-shadow: 0 0 32px rgba(106,185,255,0.22);
+}
+
+.about-card p,
+.persona-card p {
+  color: #c6ced8 !important;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVENESS
+--------------------------------------------------- */
+
+/* 414px & below (common mobile) */
+@media (max-width: 414px) {
+  .about-banner {
+    height: 32vh;
+    padding-top: 20px;
+  }
+
+  .about-banner h1 {
+    font-size: 1.7rem;
+  }
+
+  .about-banner p {
+    font-size: 0.95rem;
+  }
+
+  .about-card,
+  .persona-card {
+    padding: 18px !important;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-card h4,
+  .about-card h5,
+  .persona-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .about-card p,
+  .persona-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 360–375px (Samsung / Pixel sizes) */
+@media (max-width: 375px) {
+  .about-banner h1 {
+    font-size: 1.5rem;
+  }
+  .about-banner p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 320px (smallest phones like iPhone SE) */
+@media (max-width: 320px) {
+  .about-banner {
+    height: 30vh;
+  }
+
+  .about-banner h1 {
+    font-size: 1.3rem;
+  }
+
+  .about-banner p {
+    font-size: 0.85rem;
+  }
+
+  .about-card,
+  .persona-card {
+    padding: 15px !important;
+  }
+
+  .about-card p,
+  .persona-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet (768px–1024px) */
+@media (max-width: 1024px) {
+  .about-banner {
+    height: 38vh;
+  }
+
+  .about-card,
+  .persona-card {
+    padding: 24px !important;
+  }
+}

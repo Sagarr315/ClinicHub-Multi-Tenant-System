@@ -1,0 +1,147 @@
+/* YOUR ORIGINAL HEADER CSS */
+.main-header {
+  background: linear-gradient(135deg, #121212 0%, #1a1a2e 100%);
+  padding: 1rem 0;
+  border-bottom: 1px solid #2d3748;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6ab9ff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #4a9eff;
+  transform: translateY(-1px);
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:not(.login-btn, .demo-btn, .superadmin-btn):hover {
+  color: #6ab9ff;
+  background: rgba(106, 185, 255, 0.1);
+}
+
+.nav-links a:not(.login-btn, .demo-btn, .superadmin-btn)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #6ab9ff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:not(.login-btn, .demo-btn, .superadmin-btn):hover::after {
+  width: 80%;
+}
+
+.login-btn {
+  background: transparent;
+  color: #e2e8f0 !important;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6ab9ff;
+  color: #6ab9ff !important;
+  transform: translateY(-1px);
+}
+
+
+/* ⭐ NEW: Hamburger Icon */
+.nav-mobile-icon {
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 1.8rem;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+
+/* ⭐ NEW: Mobile Menu */
+.mobile-menu {
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeDown 0.3s ease;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 0.7rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  border: none;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.mobile-menu a:hover,
+.mobile-menu button:hover {
+  background: rgba(106,185,255,0.15);
+  color: #6ab9ff;
+}
+
+
+/* Fade Animation */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/*  RESPONSIVENESS */
+@media (max-width: 770px) {
+
+  /* Hide desktop nav */
+  .nav-desktop {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .nav-mobile-icon {
+    display: flex !important;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  /* Make header row align logo left and hamburger right */
+  .main-header .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

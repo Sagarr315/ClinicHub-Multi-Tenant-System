@@ -1,0 +1,12 @@
+.sa-dashboard {
+  padding: 40px;
+}
+
+.sa-btns a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px 18px;
+  background: #6ab9ff;
+  color: #000 !important;
+  border-radius: 8px;
+}

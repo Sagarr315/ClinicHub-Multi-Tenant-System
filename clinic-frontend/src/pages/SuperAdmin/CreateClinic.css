@@ -1,0 +1,45 @@
+.createclinic-container {
+  background-color:black !important;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6ab9ff;
+  margin-bottom: 1rem;
+}
+
+.createclinic-card {
+  background-color: #121212 !important;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+}
+
+.input-dark {
+  background: #1a1a2e !important;
+  border: 1px solid #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+.input-dark:focus {
+  border-color: #6ab9ff !important;
+  box-shadow: 0 0 6px rgba(106, 185, 255, 0.4);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6ab9ff;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #6ab9ff, #4a9eff);
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #5aa9ff, #3a8eff);
+}
