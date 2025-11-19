@@ -1,0 +1,70 @@
+/* Background */
+.cliniclogin-bg {
+  background: #0e0e0e;
+}
+
+/* Card */
+.cliniclogin-card {
+  background: #181818 !important;
+  width: 380px;
+  border-radius: 16px;
+  border: 1px solid #252525;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.1);
+}
+
+.cliniclogin-card h2 {
+  color: #ffffff;
+}
+
+.cliniclogin-role-note {
+  font-size: 0.9rem;
+  color: #7df9ff;
+}
+
+/* Input */
+.dark-input {
+  background: #111 !important;
+  color: white !important;
+  border: 1px solid #333 !important;
+}
+
+.dark-input:focus {
+  border-color: #7df9ff !important;
+  box-shadow: 0 0 8px #7df9ff !important;
+}
+
+/* Icons */
+.icon-box {
+  background: #111 !important;
+  border: 1px solid #333 !important;
+  color: #7df9ff !important;
+}
+
+.toggle-pass {
+  cursor: pointer;
+}
+
+/* Button hover */
+.login-hover:hover {
+  box-shadow: 0 0 15px #7df9ff, 0 0 20px #7df9ff inset;
+  background: #9bfaff !important;
+}
+
+/* Responsive */
+@media (max-width: 425px) {
+  .cliniclogin-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cliniclogin-card {
+    width: 270px;
+  }
+}
+
+@media (max-width: 320px) {
+  .cliniclogin-card {
+    width: 250px;
+  }
+}

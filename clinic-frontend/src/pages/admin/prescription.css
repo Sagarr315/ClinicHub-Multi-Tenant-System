@@ -1,0 +1,178 @@
+/* ==========================================
+   Prescription Page – Dark Professional UI
+========================================== */
+
+.prescription-page {
+  color: #e2e8f0;
+}
+
+/* Title */
+.prescription-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6ab9ff;
+}
+
+/* TABLE */
+.table-dark {
+  background: #1a1f26 !important;
+  color: #e2e8f0;
+}
+
+.table-dark th {
+  background: #11141a !important;
+  color: #6ab9ff;
+  border-bottom: 1px solid #2d3748;
+}
+
+.table-dark td {
+  border-color: #2a3140 !important;
+  font-size: 0.95rem;
+}
+
+.table-dark tr:hover {
+  background: rgba(106, 185, 255, 0.05) !important;
+}
+
+/* BUTTONS */
+.btn-fetch,
+.btn-download {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-fetch {
+  background: rgba(106, 185, 255, 0.15);
+  color: #6ab9ff;
+}
+
+.btn-fetch:hover {
+  background: rgba(106, 185, 255, 0.3);
+}
+
+.btn-download {
+  background: rgba(0, 255, 120, 0.15);
+  color: #00ff78;
+}
+
+.btn-download:hover {
+  background: rgba(0, 255, 120, 0.3);
+}
+
+/* PRESCRIPTION DETAIL CARD */
+.prescription-card {
+  background: #11141a;
+  border: 1px solid #2a3140;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #e2e8f0;
+  animation: fadeIn 0.3s ease;
+}
+
+.prescription-card h4 {
+  color: #6ab9ff;
+  margin-bottom: 1rem;
+}
+
+.prescription-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+/* MEDICINE LIST */
+.medicine-list {
+  background: #1a1f26;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #2a3140;
+}
+
+.medicine-list li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #2d3748;
+}
+
+/* Remove last item border */
+.medicine-list li:last-child {
+  border-bottom: none;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets 768px */
+@media (max-width: 768px) {
+  .prescription-title {
+    font-size: 1.5rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.85rem !important;
+  }
+
+  .btn-fetch,
+  .btn-download {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Small phones 575px */
+@media (max-width: 575px) {
+  .prescription-card {
+    padding: 1rem;
+  }
+
+  .medicine-list {
+    padding: 0.8rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.78rem !important;
+  }
+}
+
+/* Very small 420 / 360 / 320px */
+@media (max-width: 420px) {
+  .prescription-title {
+    font-size: 1.3rem;
+  }
+
+  .btn-fetch,
+  .btn-download {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  td,
+  th {
+    padding: 6px !important;
+  }
+
+  .medicine-list li {
+    font-size: 0.82rem;
+  }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,203 @@
+/* ================================
+   GLOBAL ADMIN PAGE WRAPPER
+=================================== */
+.admin-dashboard,
+.add-doctor-page,
+.add-receptionist-page,
+.admin-page {
+  color: #e2e8f0;
+}
+
+/* ================================
+   TITLES
+=================================== */
+.admin-title {
+  color: #6ab9ff;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* ================================
+   DASHBOARD TILES
+=================================== */
+.admin-tile {
+  display: block;
+  background: #1a1f28;
+  padding: 1.4rem;
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s;
+  border: 1px solid #2d3748;
+}
+
+.admin-tile:hover {
+  background: #232b36;
+  color: #6ab9ff;
+  transform: translateY(-3px);
+  border-color: #6ab9ff;
+}
+
+/* ================================
+   FORMS
+=================================== */
+.admin-form {
+  background: #1a1f28;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+}
+
+.admin-form .form-label {
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.form-control {
+  background: #11151c !important;
+  border: 1px solid #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+.form-control:focus {
+  border-color: #6ab9ff !important;
+  box-shadow: 0 0 5px #6ab9ff44 !important;
+}
+
+/* FORM SUBMIT BUTTON */
+.btn-submit-admin {
+  background: #6ab9ff;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-submit-admin:hover {
+  background: #89c8ff;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   TABLES
+=================================== */
+.admin-table table {
+  background: #11151c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table thead {
+  background: #1e2633;
+  color: #6ab9ff;
+}
+
+.admin-table tbody tr:hover {
+  background: #1c2330;
+}
+
+/* ACTION BUTTONS */
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 0.85rem;
+}
+
+.btn-edit {
+  background: #6ab9ff;
+  color: #000;
+}
+
+.btn-edit:hover {
+  background: #89c8ff;
+}
+
+.btn-delete {
+  background: #ff6b6b;
+  color: #000;
+}
+
+.btn-delete:hover {
+  background: #ff8787;
+}
+
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+=================================== */
+
+/* Large phones: 575px */
+@media (max-width: 575px) {
+  .admin-title {
+    font-size: 1.4rem;
+  }
+
+  .admin-tile {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small phones: 420px */
+@media (max-width: 420px) {
+  .admin-tile {
+    padding: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  .btn-submit-admin {
+    width: 100%;
+  }
+}
+
+/* Very small phones: 360px */
+@media (max-width: 360px) {
+  .admin-title {
+    font-size: 1.3rem;
+  }
+
+  .admin-tile {
+    padding: 0.75rem;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 0.68rem;
+  }
+}
+
+/* Ultra small screens: 320px */
+@media (max-width: 320px) {
+  .admin-title {
+    font-size: 1.15rem;
+  }
+
+  .admin-tile {
+    font-size: 0.75rem;
+    padding: 0.6rem;
+  }
+
+  table {
+    font-size: 0.75rem;
+  }
+}

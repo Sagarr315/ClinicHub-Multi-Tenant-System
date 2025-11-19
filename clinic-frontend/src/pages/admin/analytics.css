@@ -1,0 +1,74 @@
+.analytics-page {
+  color: #e2e8f0;
+}
+
+.analytics-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6ab9ff;
+}
+
+.analytics-card,
+.doctor-card {
+  background: #1a1f2b;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #2d3748;
+  transition: 0.3s;
+}
+
+.analytics-card:hover,
+.doctor-card:hover {
+  background: #222836;
+  transform: translateY(-2px);
+}
+
+.analytics-card h4,
+.doctor-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6ab9ff;
+}
+
+.analytics-card p,
+.doctor-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+.chart-box {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+}
+
+.analytics-subtitle {
+  color: #6ab9ff;
+  margin-bottom: 15px;
+}
+
+.doctor-select {
+  background: #1a1f2b;
+  color: #e2e8f0;
+  border: 1px solid #2d3748;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.doctor-select:focus {
+  border-color: #6ab9ff;
+  box-shadow: 0 0 5px rgba(106, 185, 255, 0.4);
+}
+
+@media (max-width: 575px) {
+  .analytics-card h4 {
+    font-size: 20px;
+  }
+
+  .chart-box {
+    padding: 15px;
+  }
+}

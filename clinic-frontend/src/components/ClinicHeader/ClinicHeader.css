@@ -1,22 +1,160 @@
+/* MAIN CLINIC HEADER */
 .clinic-header {
-  background: #151515;
-  padding: 18px 0;
-  border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #121212 0%, #1a1a2e 100%);
+  padding: 1rem 0;
+  border-bottom: 1px solid #2d3748;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  backdrop-filter: blur(10px);
 }
 
-.clinic-logo h2 {
-  font-size: 22px;
-  font-weight: 800;
+.clinic-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6ab9ff;
+  margin: 0;
+}
+
+
+/* NAV LINKS (DESKTOP) */
+.clinic-nav-links .clinic-nav-btn {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.clinic-nav-links .clinic-nav-btn:hover {
+  color: #6ab9ff;
+  background: rgba(106, 185, 255, 0.1);
+}
+
+/* Underline hover */
+.clinic-nav-links .clinic-nav-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #6ab9ff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.clinic-nav-links .clinic-nav-btn:hover::after {
+  width: 80%;
+}
+
+
+/* LOGIN BUTTON */
+.login-btn-clinic {
+  background: transparent;
+  color: #e2e8f0 !important;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.login-btn-clinic:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6ab9ff;
+  color: #6ab9ff !important;
+  transform: translateY(-1px);
+}
+
+
+/* LOGOUT BUTTON */
+.logout-btn-clinic {
+  background: transparent;
+  color: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.logout-btn-clinic:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+  transform: translateY(-1px);
+}
+
+
+/* MOBILE NAV ICON */
+.clinic-nav-mobile-icon {
+  display: none;
+}
+
+.clinic-hamburger-icon {
+  font-size: 1.8rem;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+
+/* MOBILE MENU */
+.clinic-mobile-menu {
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeDown 0.3s ease;
+}
+
+.clinic-mobile-menu a,
+.clinic-mobile-menu button {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border: none;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.clinic-mobile-menu a:hover,
+.clinic-mobile-menu button:hover {
+  background: rgba(106, 185, 255, 0.15);
   color: #6ab9ff;
 }
 
-.clinic-nav .nav-btn {
-  margin-left: 25px;
-  color: #ddd;
-  font-weight: 600;
-  transition: 0.2s;
+
+/* Fade animation */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.clinic-nav .nav-btn:hover {
-  color: #fff;
+
+/* RESPONSIVE MODE */
+@media (max-width: 770px) {
+
+  .clinic-nav-desktop {
+    display: none;
+  }
+
+  .clinic-nav-mobile-icon {
+    display: flex !important;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .clinic-header .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

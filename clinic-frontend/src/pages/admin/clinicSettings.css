@@ -1,0 +1,30 @@
+.clinic-settings-page {
+  color: #e2e8f0;
+}
+
+.settings-card {
+  background: #1a1f25;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+}
+
+.section-title {
+  color: #6ab9ff;
+  font-weight: 600;
+}
+
+.btn-save-settings {
+  background: #6ab9ff;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-save-settings:hover {
+  background: #58a8ef;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,61 @@
+.schedule-page {
+  color: #e2e8f0;
+}
+
+.schedule-title {
+  color: #6ab9ff;
+}
+
+.schedule-form {
+  background: #1b1f24;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #2d3748;
+}
+
+.btn-save {
+  background: #6ab9ff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-save:hover {
+  background: #4ea9ff;
+}
+
+.btn-edit {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #4ea9ff;
+  color: black;
+}
+
+.btn-delete {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #ff6b6b;
+  color: white;
+}
+/* Only for select dropdowns */
+.form-select {
+  background-color: #1a1f26 !important;
+  border-color: #2a3140 !important;
+  color: #e2e8f0 !important;
+}
+
+.form-select:focus {
+  background-color: #1a1f26 !important;
+  border-color: #6ab9ff !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 0 0 0.2rem rgba(106, 185, 255, 0.25) !important;
+}
+
+/* For the options dropdown */
+.form-select option {
+  background-color: #1a1f26 !important;
+  color: #e2e8f0 !important;
+}
