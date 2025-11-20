@@ -11,9 +11,7 @@ export default function ClinicHeader({ clinic }) {
   const role = user?.role;
 
   // PUBLIC LINKS → visible to everyone
-  const publicLinks = [
-    { to: `/c/${slug}`, label: "Home" },
-  ];
+  const publicLinks = [{ to: `/c/${slug}`, label: "Home" }];
 
   // ===============================
   // ROLE BASED LINKS
@@ -28,11 +26,12 @@ export default function ClinicHeader({ clinic }) {
     ];
   }
 
-  if (role === "DOCTOR") {
+  if (role === "ROLE_DOCTOR") {
     roleLinks = [
-      { to: `/c/${slug}/schedule`, label: "Schedule" },
-      { to: `/c/${slug}/my-appointments`, label: "My Appointments" },
-      { to: `/c/${slug}/patients`, label: "Patients" },
+    
+      { to: `/c/${slug}/doctor/my-appointments`, label: "My Appointments" },
+      { to: `/c/${slug}/doctor/schedule`, label: "Schedule" },
+      { to: `/c/${slug}/doctor/analytics`, label: "My Performance" },
     ];
   }
 
@@ -47,9 +46,7 @@ export default function ClinicHeader({ clinic }) {
   return (
     <header className="clinic-header shadow-sm">
       <div className="container">
-
         <div className="row align-items-center justify-content-between">
-
           {/* CLINIC NAME */}
           <div className="col-auto">
             <h2 className="clinic-logo">{clinic?.name || "Clinic"}</h2>
@@ -58,7 +55,6 @@ export default function ClinicHeader({ clinic }) {
           {/* DESKTOP NAVIGATION */}
           <div className="col clinic-nav-desktop">
             <nav className="clinic-nav-links d-flex justify-content-end gap-4">
-
               {/* Public Links */}
               {publicLinks.map((link) => (
                 <Link key={link.label} to={link.to} className="clinic-nav-btn">
@@ -81,7 +77,11 @@ export default function ClinicHeader({ clinic }) {
                 <>
                   {/* Role links */}
                   {roleLinks.map((link) => (
-                    <Link key={link.label} to={link.to} className="clinic-nav-btn">
+                    <Link
+                      key={link.label}
+                      to={link.to}
+                      className="clinic-nav-btn"
+                    >
                       {link.label}
                     </Link>
                   ))}
@@ -98,19 +98,23 @@ export default function ClinicHeader({ clinic }) {
                   </button>
                 </>
               )}
-
             </nav>
           </div>
 
           {/* MOBILE HAMBURGER */}
           <div className="col-auto clinic-nav-mobile-icon">
             {menuOpen ? (
-              <FaTimes className="clinic-hamburger-icon" onClick={() => setMenuOpen(false)} />
+              <FaTimes
+                className="clinic-hamburger-icon"
+                onClick={() => setMenuOpen(false)}
+              />
             ) : (
-              <FaBars className="clinic-hamburger-icon" onClick={() => setMenuOpen(true)} />
+              <FaBars
+                className="clinic-hamburger-icon"
+                onClick={() => setMenuOpen(true)}
+              />
             )}
           </div>
-
         </div>
 
         {/* MOBILE DROPDOWN MENU */}
@@ -161,7 +165,6 @@ export default function ClinicHeader({ clinic }) {
             )}
           </div>
         )}
-
       </div>
     </header>
   );

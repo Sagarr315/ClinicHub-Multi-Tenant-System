@@ -20,6 +20,14 @@ import Analytics from "./pages/admin/Analytics";
 import ClinicSettings from "./pages/admin/ClinicSettings";
 import AdminDoctorSchedule from "./pages/admin/AdminDoctorSchedule";
 import PrescriptionView from "./pages/admin/PrescriptionView";
+
+//Doctor pages
+
+import MyAppointments from "./pages/doctor/MyAppointments";
+import CreatePrescription from "./pages/doctor/CreatePrescription";
+import ViewPrescription from "./pages/doctor/ViewPrescription";
+import DoctorSchedule from "./pages/doctor/DoctorSchedule";
+import DoctorAnalytics from "./pages/doctor/DoctorAnalytics";
 // Super Admin Pages
 import SuperAdminLogin from "./pages/Marketing/SuperAdminLogin";
 import SADashboard from "./pages/SuperAdmin/SADashboard";
@@ -57,6 +65,20 @@ export default function AppRoutes() {
         <Route path="clinic-settings" element={<ClinicSettings />} />
         <Route path="doctor-schedule" element={<AdminDoctorSchedule />} />
         <Route path="prescriptions" element={<PrescriptionView />} />
+
+        {/* DOCTOR ROUTES */}
+
+        <Route path="doctor/my-appointments" element={<MyAppointments />} />
+        <Route
+          path="doctor/create-prescription/:appointmentId"
+          element={<CreatePrescription />}
+        />
+        <Route
+          path="doctor/view-prescription/:appointmentId"
+          element={<ViewPrescription />}
+        />
+        <Route path="doctor/schedule" element={<DoctorSchedule />} />
+        <Route path="doctor/analytics" element={<DoctorAnalytics />} />
       </Route>
 
       {/* FALLBACK */}

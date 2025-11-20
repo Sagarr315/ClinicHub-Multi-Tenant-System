@@ -30,20 +30,26 @@ export default function ClinicLogin() {
     try {
       const res = await api.post("/api/auth/login", { email, password });
 
-      const { role } = res.data;
+      const { role, clinicSubdomain } = res.data;
 
-      // Allowed clinic roles
-      const allowed = ["ROLE_ADMIN_DOCTOR", "DOCTOR", "ROLE_RECEPTIONIST"];
+      const allowed = ["ROLE_ADMIN_DOCTOR", "ROLE_DOCTOR", "ROLE_RECEPTIONIST"];
       if (!allowed.includes(role)) {
-        toast.error("This login is only for clinic staff!");
+        toast.error("This login is only for clinic staff");
         return;
       }
 
+      // Save token + role + clinic info
       login(res.data);
 
-      toast.success("Welcome!");
+      toast.success("Welcome");
 
-      // Redirect to clinic home page
+      // If user belongs to another clinic, redirect to THEIR clinic
+      if (clinicSubdomain !== slug) {
+        navigate(`/c/${clinicSubdomain}`);
+        return;
+      }
+
+      // Otherwise go inside current clinic
       navigate(`/c/${slug}`);
 
     } catch (err) {
@@ -64,13 +70,11 @@ export default function ClinicLogin() {
           <div className="text-center mb-4">
             <FaUserMd size={50} className="text-info mb-2" />
             <h2 className="fw-bold">Clinic Staff Login</h2>
-            <p className="cliniclogin-role-note">
-              Admin • Doctor • Receptionist
-            </p>
+            <p className="cliniclogin-role-note">Admin • Doctor • Receptionist</p>
           </div>
 
           <form onSubmit={handleSubmit}>
-            {/* EMAIL */}
+
             <div className="mb-3">
               <label className="form-label">Email</label>
               <div className="input-group">
@@ -88,7 +92,6 @@ export default function ClinicLogin() {
               </div>
             </div>
 
-            {/* PASSWORD */}
             <div className="mb-3">
               <label className="form-label">Password</label>
               <div className="input-group">
@@ -114,10 +117,7 @@ export default function ClinicLogin() {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="btn btn-info w-100 fw-bold login-hover"
-            >
+            <button type="submit" className="btn btn-info w-100 fw-bold login-hover">
               Login
             </button>
           </form>
