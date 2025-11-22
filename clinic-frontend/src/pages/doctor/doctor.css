@@ -78,6 +78,36 @@
   background: #374151;
 }
 
+
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.btn-cancel:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Button Group Layout */
+.d-flex.gap-2 {
+  gap: 8px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .doctor-header-bar {

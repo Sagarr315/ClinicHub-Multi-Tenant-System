@@ -1,0 +1,26 @@
+.receptionist-dashboard {
+  color: #fff;
+}
+
+.receptionist-title {
+  font-weight: 700;
+  color: #6AB9FF;
+}
+
+.receptionist-tile {
+  display: block;
+  padding: 20px;
+  background: #111827;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  color: #6AB9FF;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.receptionist-tile:hover {
+  background: #1e293b;
+  border-color: #4A9EFF;
+  transform: translateY(-3px);
+}

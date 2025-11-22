@@ -16,7 +16,8 @@ export default function MyAppointments() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (doctorId) { //Only load if doctorId exists
+    if (doctorId) {
+      //Only load if doctorId exists
       loadAppointments();
     }
   }, [doctorId]); //doctorId dependency
@@ -33,6 +34,16 @@ export default function MyAppointments() {
     }
   }
 
+  async function cancelAppointment(id) {
+    try {
+      await api.put(`/api/appointments/${id}/status`, { status: "CANCELLED" });
+      toast.success("Appointment cancelled");
+      loadAppointments(); // Refresh list
+    } catch (err) {
+      toast.error("Failed to cancel appointment");
+    }
+  }
+
   // ... rest of your code remains the same
   const todayDate = new Date().toISOString().split("T")[0];
 
@@ -40,7 +51,8 @@ export default function MyAppointments() {
     const date = app?.appointmentDate?.split("T")[0];
 
     if (filter === "TODAY") return date === todayDate;
-    if (filter === "UPCOMING") return date > todayDate && app.status !== "COMPLETED";
+    if (filter === "UPCOMING")
+      return date > todayDate && app.status !== "COMPLETED";
     if (filter === "COMPLETED") return app.status === "COMPLETED";
     return true; // ALL
   });
@@ -87,7 +99,9 @@ export default function MyAppointments() {
             <tbody>
               {filteredAppointments.length === 0 ? (
                 <tr>
-                  <td colSpan="4" className="text-center py-3">No appointments found.</td>
+                  <td colSpan="4" className="text-center py-3">
+                    No appointments found.
+                  </td>
                 </tr>
               ) : (
                 filteredAppointments.map((app) => (
@@ -106,22 +120,34 @@ export default function MyAppointments() {
                       </span>
                     </td>
                     <td className="text-center">
-                      {app.status !== "COMPLETED" ? (
-                        <button
-                          className="btn-complete"
-                          onClick={() => markCompleted(app.id)}
-                        >
-                          Mark Completed
-                        </button>
-                      ) : (
+                      {app.status === "CONFIRMED" ? (
+                        <div className="d-flex gap-2 justify-content-center">
+                          <button
+                            className="btn-complete"
+                            onClick={() => markCompleted(app.id)}
+                          >
+                            Mark Completed
+                          </button>
+                          <button
+                            className="btn-cancel"
+                            onClick={() => cancelAppointment(app.id)}
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : app.status === "COMPLETED" ? (
                         <button
                           className="btn-view"
                           onClick={() =>
-                            navigate(`/c/${slug}/doctor/view-prescription/${app.id}`)
+                            navigate(
+                              `/c/${slug}/doctor/view-prescription/${app.id}`
+                            )
                           }
                         >
                           View Prescription
                         </button>
+                      ) : (
+                        <span className="text-muted">No action</span>
                       )}
                     </td>
                   </tr>

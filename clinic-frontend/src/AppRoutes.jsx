@@ -28,11 +28,20 @@ import CreatePrescription from "./pages/doctor/CreatePrescription";
 import ViewPrescription from "./pages/doctor/ViewPrescription";
 import DoctorSchedule from "./pages/doctor/DoctorSchedule";
 import DoctorAnalytics from "./pages/doctor/DoctorAnalytics";
+
+//
+import ReceptionistDashboard from "./pages/receptionist/ReceptionistDashboard";
+
+import ReceptionistBilling from "./pages/receptionist/ReceptionistBilling";
+import PatientSearch from "./pages/receptionist/PatientSearch";
+import BookAppointment from "./pages/receptionist/BookAppointment";
+
 // Super Admin Pages
 import SuperAdminLogin from "./pages/Marketing/SuperAdminLogin";
 import SADashboard from "./pages/SuperAdmin/SADashboard";
 import CreateClinic from "./pages/SuperAdmin/CreateClinic";
 import ViewClinics from "./pages/SuperAdmin/ViewClinics";
+import ManageAppointments from "./pages/receptionist/ManageAppointments";
 
 export default function AppRoutes() {
   return (
@@ -79,10 +88,25 @@ export default function AppRoutes() {
         />
         <Route path="doctor/schedule" element={<DoctorSchedule />} />
         <Route path="doctor/analytics" element={<DoctorAnalytics />} />
-      </Route>
 
-      {/* FALLBACK */}
-      <Route path="*" element={<Home />} />
+        {/* receptionist RECEPTIONIST ROUTES */}
+        <Route
+          path="receptionist/dashboard"
+          element={<ReceptionistDashboard />}
+        />
+        <Route
+          path="receptionist/appointments"
+          element={<ManageAppointments />}
+        />
+
+        <Route path="receptionist/billing" element={<ReceptionistBilling />} />
+        <Route path="receptionist/patients" element={<PatientSearch />} />
+        <Route path="receptionist/book" element={<BookAppointment />} />
+        <Route
+          path="receptionist/prescriptions"
+          element={<PrescriptionView />}
+        />
+      </Route>
     </Routes>
   );
 }

@@ -28,7 +28,7 @@ export default function ClinicHeader({ clinic }) {
 
   if (role === "ROLE_DOCTOR") {
     roleLinks = [
-    
+     
       { to: `/c/${slug}/doctor/my-appointments`, label: "My Appointments" },
       { to: `/c/${slug}/doctor/schedule`, label: "Schedule" },
       { to: `/c/${slug}/doctor/analytics`, label: "My Performance" },
@@ -37,9 +37,10 @@ export default function ClinicHeader({ clinic }) {
 
   if (role === "ROLE_RECEPTIONIST") {
     roleLinks = [
-      { to: `/c/${slug}/book`, label: "Book Appointment" },
-      { to: `/c/${slug}/appointments`, label: "Manage Appointments" },
-      { to: `/c/${slug}/payments`, label: "Payments" },
+      { to: `/c/${slug}/receptionist/dashboard`, label: "Dashboard" },
+      { to: `/c/${slug}/receptionist/book`, label: "Book Appointment" },
+      { to: `/c/${slug}/receptionist/appointments`, label: "Manage Appointments" },
+      { to: `/c/${slug}/receptionist/billing`, label: "Payments" },
     ];
   }
   // FINAL HEADER UI

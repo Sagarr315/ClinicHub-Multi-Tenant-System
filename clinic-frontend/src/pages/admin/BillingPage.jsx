@@ -126,7 +126,7 @@ export default function BillingPage() {
 
                   {/* DISCOUNT BUTTON */}
                   <td>
-                    {bill.status === "UNPAID" ? (
+                    {bill.status === "PENDING" ? (
                       <button
                         className="btn-discount"
                         onClick={() => openDiscountModal(bill.id)}

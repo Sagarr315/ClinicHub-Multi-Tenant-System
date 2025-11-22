@@ -51,7 +51,6 @@ export default function ClinicLogin() {
 
       // Otherwise go inside current clinic
       navigate(`/c/${slug}`);
-
     } catch (err) {
       toast.error("Invalid email or password");
     }
@@ -67,14 +66,15 @@ export default function ClinicLogin() {
         style={{ borderRadius: 16 }}
       >
         <div className="cliniclogin-card card p-4 text-white">
-          <div className="text-center mb-4">
-            <FaUserMd size={50} className="text-info mb-2" />
+          <div className="text-center ">
+            <FaUserMd size={50} className="text-info " />
             <h2 className="fw-bold">Clinic Staff Login</h2>
-            <p className="cliniclogin-role-note">Admin • Doctor • Receptionist</p>
+            <p className="cliniclogin-role-note">
+              Admin • Doctor • Receptionist
+            </p>
           </div>
 
           <form onSubmit={handleSubmit}>
-
             <div className="mb-3">
               <label className="form-label">Email</label>
               <div className="input-group">
@@ -117,7 +117,10 @@ export default function ClinicLogin() {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-info w-100 fw-bold login-hover">
+            <button
+              type="submit"
+              className="btn btn-info w-100 fw-bold login-hover"
+            >
               Login
             </button>
           </form>

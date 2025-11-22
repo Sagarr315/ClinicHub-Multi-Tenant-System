@@ -1,0 +1,86 @@
+/* Sort Controls */
+.sort-indicator {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #6AB9FF;
+}
+
+.rcp-filter {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #111;
+  border: 1px solid #6AB9FF;
+  color: #6AB9FF;
+  cursor: pointer;
+}
+
+.rcp-filter:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(106, 185, 255, 0.3);
+}
+
+/* Status Styles */
+.rcp-status {
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rcp-paid {
+  background: #22c55e;
+  color: white;
+}
+
+.rcp-pending {
+  background: #facc15;
+  color: #000;
+}
+
+.rcp-unknown {
+  background: #6b7280;
+  color: white;
+}
+
+/* Button Styles */
+.rcp-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.rcp-pay {
+  background: #4A9EFF;
+  color: white;
+}
+
+.rcp-pay:hover {
+  background: #6AB9FF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(106, 185, 255, 0.3);
+}
+
+/* Table Styles */
+.rcp-billing-table {
+  background: #1c1f26;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rcp-billing-table th {
+  background: #2a2f38;
+  color: #6AB9FF;
+  font-weight: 600;
+  border: none;
+  padding: 12px 8px;
+}
+
+.rcp-billing-table td {
+  border-color: #2a2f38;
+  padding: 10px 8px;
+  vertical-align: middle;
+}
