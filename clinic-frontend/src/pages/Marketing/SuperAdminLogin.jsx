@@ -111,6 +111,13 @@ export default function SuperAdminLogin() {
               Login
             </button>
           </form>
+          <p
+  style={{ marginTop: "10px", cursor: "pointer", color: "#7df9ff", textAlign: "center" }}
+  onClick={() => navigate("/superadmin/forgot-password")}
+>
+  Forgot Password?
+</p>
+
         </div>
       </ElectricBorder>
     </div>

@@ -124,6 +124,13 @@ export default function ClinicLogin() {
               Login
             </button>
           </form>
+          <p
+  style={{ marginTop: "10px", cursor: "pointer", color: "#7df9ff", textAlign: "center" }}
+  onClick={() => navigate(`/c/${slug}/forgot-password`)}
+>
+  Forgot Password?
+</p>
+
         </div>
       </ElectricBorder>
     </div>

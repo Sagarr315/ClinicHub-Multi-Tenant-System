@@ -10,6 +10,9 @@ import Contact from "./pages/Marketing/Contact";
 import ClinicLayout from "./layouts/ClinicLayout";
 import ClinicLanding from "./pages/PublicClinic/ClinicLanding";
 import ClinicLogin from "./pages/ClinicAuth/ClinicLogin";
+import ForgotPassword from "./pages/ClinicAuth/ForgotPassword";
+import VerifyOtp from "./pages/ClinicAuth/VerifyOtp";
+import ResetPassword from "./pages/ClinicAuth/ResetPassword";
 
 // Admin Pages
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -58,9 +61,18 @@ export default function AppRoutes() {
       <Route path="/superadmin/createclinic" element={<CreateClinic />} />
       <Route path="/superadmin/clinics" element={<ViewClinics />} />
 
+      {/* FORGOT PASSWORD ROUTES */}
+      <Route path="/superadmin/forgot-password" element={<ForgotPassword />} />
+      <Route path="/superadmin/verify-otp" element={<VerifyOtp />} />
+      <Route path="/superadmin/reset-password" element={<ResetPassword />} />
+
       {/* CLINIC SOFTWARE AREA */}
       <Route path="/c/:slug" element={<ClinicLayout />}>
         {/* Public Pages */}
+
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="verify-otp" element={<VerifyOtp />} />
+        <Route path="reset-password" element={<ResetPassword />} />
         <Route index element={<ClinicLanding />} />
 
         <Route path="cliniclogin" element={<ClinicLogin />} />
