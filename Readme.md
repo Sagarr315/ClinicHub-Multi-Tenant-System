@@ -56,7 +56,7 @@ This repository contains both the backend API (Spring Boot) and frontend web app
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/clinic-hub.git
+git clone https://github.com/Sagarr315/ClinicHub-Multi-Tenant-System.git
 cd clinic-hub
 ```
 ⚙️ Backend Setup (Spring Boot)
