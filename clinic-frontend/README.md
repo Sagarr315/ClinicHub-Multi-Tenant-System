@@ -1,58 +1,71 @@
-1. ClinicHub Frontend
-   React + Vite Multi-Tenant Clinic Management System (Frontend Only)
+# ClinicHub Frontend
+React + Vite Multi-Tenant Clinic Management System (Frontend Only)
 
-2. Overview
-   2.1 This repository contains the frontend of ClinicHub.
-   2.2 Each clinic has its own subdomain and branding.
-   2.3 Role-based dashboards for Admin-Doctor, Doctor, and Receptionist.
+---
 
-3. Features
-   3.1 Multi-Tenant System
-   3.2 Dynamic subdomain routing (/c/:slug)
-   3.3 Each clinic loads its own name, address, and branding
-   3.4 Cross-clinic access is blocked
+## 1. Overview
+- This repository contains the frontend of ClinicHub
+- Each clinic has its own subdomain and branding
+- Role-based dashboards for:
+  - Admin-Doctor
+  - Doctor
+  - Receptionist
 
-3.2 Doctor Module
-    3.1 My Appointments
-    3.2 Mark Appointment Completed
-    3.3 Create Prescription
-    3.4 View Prescription   
-    3.5 My Schedule
-    3.6 Doctor Analytics
+---
 
-3.3 Receptionist Module
-    3.1 Book Appointment
-    3.2 Manage Appointments (Confirm, Cancel)
-    3.3 View Bills
-    3.4 Update Bill Status
-    3.5 Patient Search
-    3.6 Access Doctor Schedules
+## 2. Features
 
-3.4 Admin-Doctor Module
-    3.1 Dashboard
-    3.2 Clinic Analytics
-    3.3 Appointment, Patient, Revenue Overview
+### 2.1 Multi-Tenant System
+- Dynamic subdomain routing (`/c/:slug`)
+- Each clinic loads its own name, address, and branding
+- Cross-clinic access is blocked
 
-3.5 General
-    3.1 JWT authentication
-    3.2 Role-based routing
-    3.3 Responsive UI
-    3.4 Centralized API service
-    3.5 Notifications with react-hot-toast
+### 2.2 Doctor Module
+- My Appointments
+- Mark Appointment Completed
+- Create Prescription
+- View Prescription
+- My Schedule
+- Doctor Analytics
 
-4. Tech Stack
-   4.1 React
-   4.2 Vite
-   4.3 React Router
-   4.4 Context API
-   4.5 Axios
-   4.6 Bootstrap
-   4.7 Custom CSS
-   4.8 Recharts
+### 2.3 Receptionist Module
+- Book Appointment
+- Manage Appointments (Confirm, Cancel)
+- View Bills
+- Update Bill Status
+- Patient Search
+- Access Doctor Schedules
 
-5. Project Structure
+### 2.4 Admin-Doctor Module
+- Dashboard
+- Clinic Analytics
+- Appointment, Patient, Revenue Overview
 
-  clinic-frontend/
+### 2.5 General
+- JWT authentication
+- Role-based routing
+- Responsive UI
+- Centralized API service
+- Notifications with `react-hot-toast`
+
+---
+
+## 3. Tech Stack
+- React
+- Vite
+- React Router
+- Context API
+- Axios
+- Bootstrap
+- Custom CSS
+- Recharts
+
+---
+
+## 4. Project Structure
+
+```bash
+clinic-frontend/
 │── src/
 │   ├── components/
 │   │   ├── ClinicHeader/
@@ -73,53 +86,67 @@
 │── index.html
 │── package.json
 │── vite.config.js
+```
+5. Installation
+5.1 Install Dependencies
+```bash
+npm install
+```
+5.2 Create .env File
+```bash
+VITE_API_BASE_URL=http://localhost:8080
+```
+5.3 Start Development Server
+```bash
+npm run dev
+```
+## 6. Authentication
+- Login URL: `/c/:slug/cliniclogin`
+- Token stored in `localStorage`
+- AuthContext manages:
+  - token
+  - role
+  - clinicId
+  - userId
+  - clinicSubdomain
+- Axios interceptors automatically attach token
 
+---
 
-6. Installation
-   6.1 Install dependencies:
-        npm install
-   6.2 Create .env file:
-        VITE_API_BASE_URL=http://localhost:8080
-   6.3 Start development server:
-        npm run dev
+## 7. API Integration
+- All API code located in: `src/services/api.js`
+- Includes:
+  - Base URL configuration
+  - Token injection
+  - Error handling
 
-7. Authentication
-   7.1 Login at /c/:slug/cliniclogin
-   7.2 Token stored in localStorage
-   7.3 AuthContext manages:
-            7.1 token
-            7.2 role
-            7.3 clinicId
-            7.4 userId
-            7.5 clinicSubdomain
-   7.4 Axios interceptors auto-attach token
+---
 
-8. API Integration
-   8.1 All API code in: src/services/api.js
-   8.2 Includes:
-        8.1 Base URL
-        8.2 Token injection
-        8.3 Error handling
+## 8. Theme and Colors
+- Primary Cyan: `#6AB9FF`
+- Neon Blue: `#4A9EFF`
+- Background Dark: `#0f0f0f`
+- Success: `#22c55e`
+- Error: `#ef4444`
 
-9. Theme and Colors
-   9.1 Primary Cyan: #6AB9FF
-   9.2 Neon Blue: #4A9EFF
-   9.3 Background Dark: #0f0f0f
-   9.4 Success: #22c55e
-   9.5 Error: #ef4444
+---
 
-10. Role-Based Routing
-    10.1 Handled in AppRoutes.jsx
-    10.2 Redirect rules:
-            10.1 Admin-Doctor → Admin dashboard
-            10.2 Doctor → Doctor dashboard
-            10.3 Receptionist → Receptionist dashboard
-            10.4 Unauthorized role → Redirect to login
+## 9. Role-Based Routing
+- Handled in `AppRoutes.jsx`
+- Redirect rules:
+  - Admin-Doctor → Admin dashboard
+  - Doctor → Doctor dashboard
+  - Receptionist → Receptionist dashboard
+  - Unauthorized role → Redirect to login
 
-11. Build for Production
-             npm run build
+---
 
-12. Notes
-    12.1 Only clinic staff can log in
-    12.2 Public users can only access clinic landing page
-    12.3 Clinic switching is protected by subdomain validation
+## 10. Build for Production
+- Build command:
+```bash
+npm run build
+```
+## 11. Notes
+- Only clinic staff can log in
+- Public users can only access clinic landing page
+- Clinic switching is protected by subdomain validation
