@@ -1,0 +1,60 @@
+# ===============================
+# Build output
+# ===============================
+target/
+build/
+
+# ===============================
+# Maven Wrapper (DO NOT PUSH)
+# ===============================
+.mvn/
+mvnw
+mvnw.cmd
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Java compiled files
+# ===============================
+*.class
+
+# ===============================
+# IDEs
+# ===============================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse / STS
+.project
+.classpath
+.factorypath
+.settings/
+.springBeans
+.sts4-cache/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ===============================
+# OS files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Environment files
+# ===============================
+.env
